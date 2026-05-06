@@ -2,6 +2,8 @@
 
 An end-to-end, enterprise-grade ELT (Extract, Load, Transform) data pipeline designed to ingest, cleanse, model, audit, and secure **26,794,878 rows** of raw public healthcare data from the Centers for Medicare & Medicaid Services (CMS). 
 
+DATASET: https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug
+
 This pipeline represents a highly optimized, HIPAA-compliant Star Schema built in Snowflake, sourced from Google Cloud Storage (GCS). It showcases advanced data engineering capabilities including **Slowly Changing Dimensions (SCD) Type 2**, **Dynamic Data Masking for PHI/PII**, and automated **Data Quality & Reconciliation** logging.
 
 ---
