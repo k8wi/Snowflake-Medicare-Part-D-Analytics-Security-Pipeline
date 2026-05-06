@@ -44,9 +44,10 @@ The architecture operates under a strict separation of concerns, transitioning r
 
 ## 2. Advanced Enterprise Implementations
 
-### A. Data Quality & Reconciliation Layer (UAT Audit Framework)
-To prevent downstream reporting corruption, this pipeline features an active auditing framework that logs diagnostic assertions into a `dq_results` audit table. A dynamic scorecard view queries the latest execution pass to confirm pipeline health.
+### A. Data Quality & Reconciliation Layer (Keeping Our Data Clean)
+If you put bad data in, you get bad decisions out—especially in healthcare, where a single missing ID or incorrect calculation can break compliance. To prevent this, I built an automated safety net directly into the pipeline.
 
+After every data load, the system automatically runs three self-checks and writes the results to a tracking table. A live scorecard view lets us monitor the health of the entire pipeline at a
 * **Reconciliation Checks:**
   1. **NPI Null-Rate Check:** Verifies provider identity completeness in staging.
   2. **Negative Cost Check:** Financial check ensuring no corrupt negative drug costs enter the analytical layer.
